@@ -106,3 +106,33 @@ Valido para funções que não tem escopo maior que duas linhas
     soma(1);
     soma();
 
+## Desestruturação
+
+A sintaxe de atribuição via desestruturação (destructuring assignment) é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
+
+Exemplo sem a utilização de desestruturação.
+
+    const usuario = {
+      nome: 'Euller',
+      idade: 36, 
+      endereco: {
+        cidade: 'Belo Horizonte', 
+        estado: 'MG'
+      }
+    };
+    
+    const nome = usuario.nome;
+    const idade = usuario.idade;
+    const cidade = usuario.endereco.cidade;
+
+**Refatorando**
+
+    const { nome , idade, endereco: { cidade } } = usuario;
+
+**Utilizando em funções **
+
+    function mostraDados({nome, idade}){
+      console.log(nome, idade);
+    }
+    
+    mostraDados(usuario);
