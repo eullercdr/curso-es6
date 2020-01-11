@@ -37,3 +37,54 @@ O método find() retorna o valor do primeiro elemento do array que satisfizer a 
       return item ===4;
     });    
     console.log(find);
+    
+## Desestruturação
+
+    const newArr = arr.map(function(item){
+       return item * 2;
+    });
+
+**Otimização 1  - Transformando em função Anônima**
+
+        const newArr = arr.map((item) => {
+           return item * 2;
+        });
+
+**Otimização 2 **
+
+    const newArr = arr.map(item => {
+       return item * 2;
+    });
+
+**Otimização 3 - Transformando todo codigo em uma linha**
+Valido para funções que não tem escopo maior que duas linhas
+
+    const newArr = arr.map(item => item * 2);
+
+**Exemplo de função de retorno**
+
+      function teste(){
+          return "algo";
+        }
+
+Otimização 1 - retornando a função por uma const
+
+    const teste = ( ) => {
+       return 'teste';
+    }
+
+**Retornando uma String**
+
+    const teste = ( ) => 'teste';
+
+**Retornando um array **
+
+    const teste = ( ) = [1,2,3,4];
+
+**Retornando um número**
+
+    const teste = ( ) = 3;
+
+**Retornando um objeto - Deve ser passado entre parenteses nesse caso**
+
+    const teste = () => ({nome: 'Euller'});
