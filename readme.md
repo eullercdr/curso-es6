@@ -136,3 +136,54 @@ Exemplo sem a utilização de desestruturação.
     }
     
     mostraDados(usuario);
+
+## REST Operator
+
+    const usuario = {
+      nome: 'Euller',
+      idade: 23,
+      empresa: 'Google'
+    }
+    
+    const {nome, ...resto} = usuario;  
+	console.log(nome, resto);
+    return // 'Euller', {idade: 23, empresa: "Google"}
+    
+
+
+    const array = [1,2,3,4];
+    
+    const [a, b, ...c] = array;
+    
+    console.log(a);
+    console.log(b);
+    console.log(c);
+	return //1, 2 , [3, 4]
+
+**Utilizando funções**
+
+    function soma(...params){
+      return params.reduce((total,next)=>total+next);
+    }
+    
+    function soma2(a, b,...params){
+      return params;
+    }
+
+## Spread Operator
+
+    const arr1 = [1,2,3];
+    const arr2 = [4,5,6];
+    const arr3 = [...arr1, ...arr2];
+    console.log(arr3);
+    return // [1,2,3,4, 5, 6];
+
+Cria um novo objeto com base nos dados do objeto 1, mudando apenas o nome
+
+        const usuario1 = {
+          nome: 'Renato',
+          idade: 22, 
+          empresa: 'Facebook'
+        };
+        const usuario2 = {...usuario1, nome: 'Gabriel'};
+      console.log(usuario2);  
