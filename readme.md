@@ -90,3 +90,19 @@ Valido para funções que não tem escopo maior que duas linhas
 **Retornando um objeto - Deve ser passado entre parenteses nesse caso**
 
     const teste = () => ({nome: 'Euller'});
+    
+ 
+## Valores padrões para funções
+
+    function soma(a=3,b=6){
+      return a + b;
+    }
+    soma(1);
+    soma();
+
+**Utlizando Arrow Functions  (Simplificando =D )  **
+
+    const soma = (a=3, b=6) => a + b
+    soma(1);
+    soma();
+
