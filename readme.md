@@ -129,7 +129,7 @@ Exemplo sem a utilização de desestruturação.
 
     const { nome , idade, endereco: { cidade } } = usuario;
 
-**Utilizando em funções **
+**Utilizando em funções**
 
     function mostraDados({nome, idade}){
       console.log(nome, idade);
