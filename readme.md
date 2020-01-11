@@ -38,7 +38,9 @@ O método find() retorna o valor do primeiro elemento do array que satisfizer a 
     });    
     console.log(find);
     
-## Desestruturação
+## Arrow Function
+
+Uma expressão arrow function possui uma sintaxe mais curta quando comparada a uma expressão de função (function expression) e não tem seu próprio this, arguments, super ou new.target. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (constructors).
 
     const newArr = arr.map(function(item){
        return item * 2;
@@ -67,7 +69,7 @@ Valido para funções que não tem escopo maior que duas linhas
           return "algo";
         }
 
-Otimização 1 - retornando a função por uma const
+**Otimização 1 - retornando a função por uma const**
 
     const teste = ( ) => {
        return 'teste';
