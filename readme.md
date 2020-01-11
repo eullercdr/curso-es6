@@ -100,7 +100,7 @@ Valido para funções que não tem escopo maior que duas linhas
     soma(1);
     soma();
 
-**Utlizando Arrow Functions  (Simplificando =D )  **
+**Utlizando Arrow Functions  (Simplificando =D )**
 
     const soma = (a=3, b=6) => a + b
     soma(1);
