@@ -201,4 +201,27 @@ Template literals são literais string que permitem expressões embutidas. Você
 
 **Usando template literals, abre e fecha com ` e utiliza ${var}**
 
-    console.log(`Meu nome é ${nome} e tenho ${idade} anos`);     
+    console.log(`Meu nome é ${nome} e tenho ${idade} anos`);
+
+# Object Short  Syntax
+
+Sintaxe curta de objetos
+
+    const nome = "Euller";
+    const idade = 23;
+
+**Sem short syntax**
+
+    const usuario = {
+      nome: nome, 
+      idade: idade, 
+      empresa: 'Google'
+    }
+
+**Com ES6 **
+
+    const usuario = {
+      nome, 
+      idade, 
+      empresa: 'Google'
+    }
