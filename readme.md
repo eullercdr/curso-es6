@@ -209,7 +209,7 @@ Sintaxe curta de objetos
 
     const nome = "Euller";
     const idade = 23;
-
+    
 **Sem short syntax**
 
     const usuario = {
