@@ -245,20 +245,22 @@ Sintaxe curta de objetos
     
     executaPromise();
     
-import axios from 'axios';
+Usando Axios
 
-class Api {
-  static async getUserInfo(username){
-
-    try {
-     const response = await axios.get(`https://api.github.com/users/${username}`);
-     console.log(response);
+    import axios from 'axios';
+    
+    class Api {
+      static async getUserInfo(username){
+    
+        try {
+         const response = await axios.get(`https://api.github.com/users/${username}`);
+         console.log(response);
+        }
+        catch(err){
+          console.warn('Erro na Api');
+        }
+      }
     }
-    catch(err){
-      console.warn('Erro na Api');
-    }
-  }
-}
-
-Api.getUserInfo('eullercdr');
-Api.getUserInfo('eullercdr2');
+    
+    Api.getUserInfo('eullercdr');
+    Api.getUserInfo('eullercdr2');
