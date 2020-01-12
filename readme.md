@@ -187,3 +187,18 @@ Cria um novo objeto com base nos dados do objeto 1, mudando apenas o nome
         };
         const usuario2 = {...usuario1, nome: 'Gabriel'};
       console.log(usuario2);  
+      
+# Template Literals
+
+Template literals são literais string que permitem expressões embutidas. Você pode usar string multi-linhas e interpolação de string com elas.
+
+    const nome = "Euller";
+    const idade = 36;
+
+**Exemplo sem template literals**
+
+    console.log('Meu nome é ' + nome + ' e tenho' + idade + ' anos');
+
+**Usando template literals, abre e fecha com ` e utiliza ${var}**
+
+    console.log(`Meu nome é ${nome} e tenho ${idade} anos`);     
