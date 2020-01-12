@@ -225,3 +225,22 @@ Sintaxe curta de objetos
       idade, 
       empresa: 'Google'
     }
+# Programação Assincrona
+
+    const minhaPromisse = () => new Promise((resolve, reject)=>{
+      setTimeout(()=>{resolve('OK')},2000);
+    });
+    
+    async function executaPromise(){
+      console.log(await minhaPromisse());
+      console.log(await minhaPromisse());
+      console.log(await minhaPromisse());  
+    }
+    
+    const executaPromise = async () => {
+      console.log(await minhaPromisse());
+      console.log(await minhaPromisse());
+      console.log(await minhaPromisse());
+    }
+    
+    executaPromise();
