@@ -218,7 +218,7 @@ Sintaxe curta de objetos
       empresa: 'Google'
     }
 
-**Com ES6 **
+**Com ES6**
 
     const usuario = {
       nome, 
