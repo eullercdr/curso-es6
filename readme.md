@@ -264,3 +264,61 @@ Usando Axios
     
     Api.getUserInfo('eullercdr');
     Api.getUserInfo('eullercdr2');
+### Let e Const
+
+Anteriormente no JS utilizávamos sempre o var, tanto para constantes (Existia?) quanto para variáveis. Uma das novas mudanças é a implementação do let para variáveis e const para constantes. Depois de criada uma constante, se você tentar passar um novo valor a ela, receberá um erro.
+
+    let minhaVariavel = "Algum valor";
+    const minhaConstante = "Algum valor";
+
+###  Exports e Imports
+Outro recurso importante foi a chegada da importação e exportação de módulos e classes, facilitando a modularização dos nossos Apps.
+
+Podemos simplesmente utilizar o export default SEUOBJETO para exportar um objeto de uma classe.
+
+        // course.js
+        const course = {
+          title: "JS Moderno",
+          tag: "7199"
+        }
+    export default course
+
+Ou podemos utilizar o export const diretamente no objeto, que é o meio mais comum e que particularmente prefiro.
+
+    // course.js
+    export const Course = {
+      title: "JS Moderno",
+      tag: "7199"
+    }
+
+Com tudo exportado, podemos importar os objetos, utilizando o import. Para importar objetos exportados utilizando o default, basta criar um nome e fazer sua importação.
+
+Para objetos exportados via const, devemos utilizar seu mesmo nome, e entre colchetes.
+
+    // Importação quando o módulo usa export default
+    import course from 'caminho/para/course.js';
+    
+    // Importação quando o módulo usa export const
+    import { Course } from 'caminho/para/course.js';
+
+Podemos também utilizar alias para ambos os casos, como mostrado no código abaixo.
+
+    // Importação quando o módulo usa export default
+    import course from 'caminho/para/course.js';
+    
+    // Importação quando o módulo usa export default
+    // utilizando nome personalizado
+    import meuCurso from 'caminho/para/course.js';
+    
+    // Importação quando o módulo usa export const
+    import { Course } from 'caminho/para/course.js';
+    
+    // Importação quando o módulo usa export const
+    // Utilizando nome personalizado
+    import { Course as meuCurso } from 'caminho/para/course.js';
+
+
+E se você tiver muitos exports em uma classe e quiser importa-los todos de uma vez (Somente exports via const), você pode utilizar o wildcard * e criar um alias para ele.
+
+    // Importa todas as constantes do arquivo e cria um alias cursos
+    import { * as cursos } from 'caminho/para/course.js';
